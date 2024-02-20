@@ -1,5 +1,5 @@
 gsap.to(".box", {
-  duration: 1,
+  duration: 0.5,
   repeat: 0,
   delay: 1.5,
   backgroundColor: "white",
@@ -10,13 +10,42 @@ gsap.to(".box", {
   stagger: {
     grid: [10, 20],
     from: "random",
-    amount: 2,
+    amount: 1,
   },
-  display: "hide",
+});
+gsap.to(".animation",{
+  delay:4,
+  display: "none"
 });
 
 // effect between pages
+function effect_between_pages(url) {
+  console.log(url)
+  gsap.to(".box", {
+    duration: 1,
+    repeat: 0,
+    delay: 0,
+    backgroundColor: "white",
+    scale: 1,
+    y: 0,
+    opacity: 1,
+    ease: "power1.inOut",
+    stagger: {
+      grid: [10, 20],
+      from: "random",
+      amount: 1,
+    },
+  });
+  gsap.to(".animation",{
+    delay:0,
+    display: "grid"
+  });
+  
+  setTimeout(()=>{window.location.host = window.location.host + url},4000)
+  
 
+
+}
 
 
 let alp = [
@@ -54,14 +83,7 @@ let alp1 = ['私', 'は', '癌', 'を', '患', 'っ', 'て', 'い', 'ま', 'す'
 
 
 setTimeout(() => {
-  function effect_between_pages(url) {
-    console.log("hi")
-    
-    
-    // console.log(window.url)
   
-  
-  }
 
   {
     // -------HOME------
