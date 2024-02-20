@@ -1,19 +1,19 @@
-// gsap.to(".box", {
-//   duration: 1,
-//   repeat: 0,
-//   delay: 1.5,
-//   backgroundColor: "white",
-//   scale: 0.1,
-//   y: -1000,
-//   opacity: 0,
-//   ease: "power1.inOut",
-//   stagger: {
-//     grid: [10, 20],
-//     from: "random",
-//     amount: 2,
-//   },
-//   display: "hide",
-// });
+gsap.to(".box", {
+  duration: 1,
+  repeat: 0,
+  delay: 1.5,
+  backgroundColor: "white",
+  scale: 0.1,
+  y: -1000,
+  opacity: 0,
+  ease: "power1.inOut",
+  stagger: {
+    grid: [10, 20],
+    from: "random",
+    amount: 2,
+  },
+  display: "hide",
+});
 
 // effect between pages
 
