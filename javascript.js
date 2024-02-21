@@ -40,11 +40,10 @@ function effect_between_pages(url) {
     delay:0,
     display: "grid"
   });
+  console.log("http://"+window.location.host.toString() + url)
+  let newURL = "http://"+window.location.host.toString() + url;
+  setTimeout(()=>{window.location.replace(newURL)},2500)
   
-  setTimeout(()=>{window.location.host = window.location.host + url},4000)
-  
-
-
 }
 
 
@@ -83,6 +82,59 @@ let alp1 = ['私', 'は', '癌', 'を', '患', 'っ', 'て', 'い', 'ま', 'す'
 
 
 setTimeout(() => {
+
+  {
+    //----------- profile img effect----------
+    gsap.fromTo(".tempimg",{
+      height: 0,
+      width: 2,
+      backgroundColor: "white",
+    },{
+      ease: "elastic.out(2,0.2)",
+      duration:2,
+      height:250
+    })
+    gsap.to(".tempimg",{
+      delay:1.1,
+      duration:2,
+      ease: "elastic.out(8,0.2)",
+      rotate:45
+
+    })
+    gsap.to(".tempimg",{
+      delay: 2.4,
+      width:250
+    })
+    gsap.fromTo(".temp1",{
+      width: 0,
+      height: 0,
+      border: 0,
+      rotateX: 0
+      
+    },{
+      delay: 3,
+      duration: 3,
+      width: 300,
+      height: 300,
+      border: "solid 5px white",
+      zIndex: -5
+    })
+    gsap.to(".tempimg",{
+      delay: 4,
+      duration: 2,
+      backgroundImage: "url(/img/temp2.jpg)"
+    })
+    gsap.to(".temp1",{
+      delay: 6.5,
+      duration: 5,
+      height: 270,
+      width: 270,
+      yoyo: true,
+      border: "solid 2px white",
+      ease: "elastic.out(2,0.2)",
+      repeat: -1
+    })
+  }
   
 
   {
